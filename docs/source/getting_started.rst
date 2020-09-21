@@ -1,20 +1,15 @@
 Getting Started
 ===============
-.. contents::
-   :depth: 2
 
 Dependencies
 ------------
 
 Required
 ^^^^^^^^
-* Package 1
-* Package 2
-* Package 3
+* numpy
 
 Optional
 ^^^^^^^^
-* Package 4
 
 Note on installing dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -43,6 +38,6 @@ Install from source
 
 .. code:: bash
 
-   git clone https://github.com/terrencetec/mypythonlibrary.git
-   cd mypythonlibrary
+   git clone https://github.com/gw-vis/vishack.git
+   cd vishack
    pip install .

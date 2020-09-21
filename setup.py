@@ -1,5 +1,5 @@
-"""My Python Library
-A template for creating new python library
+"""VISHack
+A health checking system for vibration isolation system in KAGRA
 
 Fetched from:
 A setuptools based setup module.
@@ -20,20 +20,26 @@ long_description = (here / 'README.rst').read_text(encoding='utf-8')
 # Arguments marked as "Required" below must be included for upload to PyPI.
 # Fields marked as "Optional" may be commented out.
 
+MAJOR = 0
+MINOR = 0
+MICRO = 0
+VERSION = '%d.%d.%d'%(MAJOR,MINOR,MICRO)
+
 setup(
-    name='mypythonlibrary',  # Required
-    version='0.0.0',  # Required
-    description='A template for creating new python library',  # Optional
+    name='vishack',  # Required
+    version=VERSION,  # Required
+    description='A health checking system for vibration isolation systems in KAGRA',  # Optional
     long_description=long_description,  # Optional
     long_description_content_type='text/x-rst',  # Optional (see note above)
-    url='https://github.com/terrencetec/mypythonlibrary',  # Optional
+    url='https://github.com/gw-vis/vishack',  # Optional
     author='TSANG Terrence Tak Lun',  # Optional
-    author_email='terrencetec@gmail.com',  # Optional
-    keywords='sample, setuptools, development',  # Optional
+    author_email='ttltsang@link.cuhk.edu.hk, terrencetec@gmail.com',  # Optional
+    keywords='KAGRA, gravitational waves, observatory',  # Optional
     packages=find_packages(),
     python_requires='>=3.5, <4',
     install_requires=[
         'numpy',
+        'dtt2hdf',
     ], # Dependencies here, Optional
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"
@@ -52,7 +58,7 @@ setup(
     # },
     entry_points={
         'console_scripts': [
-            'print-hello-worlds=mypythonlibrary.clitools.print_hello_worlds:main'
+            'vishack-print=vishack.clitools.print_vishack:main'
         ],
     }
     # List additional URLs that are relevant to your project as a dict.

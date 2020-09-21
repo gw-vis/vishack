@@ -1,23 +1,25 @@
 |logo|
 
-*One-line description here!*
+**A health checking system for vibration isolation systems in KAGRA**
 
 |website| |release| |rtd| |license|
 
-My Python Library
-=================
+VISHack
+=======
 
-This is a template for creating new python library. Here are some descriptions!
+VISHack is a python library for health checking of vibration isolation systems
+(VIS) in KAGRA. It can be used for both manual and automatic self-diagnosis
+(probably with Guardian).
 
 **features**
 
-* print Hello World!
-* print many Hello Worlds!
-* command line tools for printing a lot of Hello Worlds!
+* Health checks!
+* Many health checks!
+* command line tools health checking!
 
-**Documentation**: https://mypthonlibrary.readthedocs.io
+**Documentation**: https://vishack.readthedocs.io
 
-**Repository**: https://github.com/terrencetec/mypythonlibrary
+**Repository**: https://github.com/gw-vis/vishack
 
 .. contents::
    :depth: 2
@@ -30,13 +32,10 @@ Dependencies
 
 Required
 ^^^^^^^^
-* Package 1
-* Package 2
-* Package 3
+* numpy
 
 Optional
 ^^^^^^^^
-* Package 4
 
 Note on installing dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -65,8 +64,8 @@ Install from source
 
 .. code:: bash
 
-   git clone https://github.com/terrencetec/mypythonlibrary.git
-   cd mypythonlibrary
+   git clone https://github.com/gw-vis/vishack.git
+   cd vishack
    pip install .
 
 How to Contribute
@@ -130,20 +129,20 @@ Open index.html with a browser (if this was set as the first page).
 
 .. |logo| image:: logo.svg
     :alt: Logo
-    :target: https://github.com/terrencetec/mypythonlibrary
+    :target: https://github.com/gw-vis/vishack
 
-.. |website| image:: https://img.shields.io/badge/website-mypythonlibrary-blue.svg
+.. |website| image:: https://img.shields.io/badge/website-vishack-blue.svg
     :alt: Website
-    :target: https://github.com/terrencetec/mypythonlibrary
+    :target: https://github.com/gw-vis/vishack
 
-.. |release| image:: https://img.shields.io/github/v/release/terrencetec/mypythonlibrary?include_prereleases
+.. |release| image:: https://img.shields.io/github/v/release/gw-vis/vishack?include_prereleases
    :alt: Release
-   :target: https://github.com/terrencetec/mypythonlibrary/releases
+   :target: https://github.com/gw-vis/vishack/releases
 
-.. |rtd| image:: https://readthedocs.org/projects/mypythonlibrary/badge/?version=latest
+.. |rtd| image:: https://readthedocs.org/projects/vishack/badge/?version=latest
    :alt: Read the Docs
-   :target: https://mypythonlibrary.readthedocs.io/
+   :target: https://vishack.readthedocs.io/
 
-.. |license| image:: https://img.shields.io/github/license/terrencetec/mypythonlibrary
+.. |license| image:: https://img.shields.io/github/license/gw-vis/vishack
     :alt: License
-    :target: https://github.com/terrencetec/mypythonlibrary/blob/master/LICENSE
+    :target: https://github.com/gw-vis/vishack/blob/master/LICENSE

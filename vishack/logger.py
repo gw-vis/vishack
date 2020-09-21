@@ -1,6 +1,6 @@
 import logging
 
-logger = logging.getLogger("mypythonlibrary")
+logger = logging.getLogger("vishack")
 
 logger.setLevel(logging.DEBUG)
 

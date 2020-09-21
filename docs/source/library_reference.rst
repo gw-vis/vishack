@@ -1,10 +1,24 @@
 Library Reference
 =================
 
-hello world
------------
+Compare
+-------
 
-.. automodule:: mypythonlibrary.helloworld.helloworld
+.. automodule:: vishack.compare
    :members:
    :undoc-members:
    :show-inheritance:
+
+Data Management
+---------------
+
+Diaggui
+^^^^^^^
+
+.. _class-ref:
+.. currentmodule:: vishack.data.diaggui
+
+.. autosummary::
+   :toctree: generated/
+
+   Diaggui
