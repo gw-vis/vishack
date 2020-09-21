@@ -12,7 +12,7 @@ class Diaggui:
     Parameters
     ----------
     path: string
-        The path to the diaggui XML output file.
+        The path to the diaggui XML output file.x
 
     Attributes
     ----------
