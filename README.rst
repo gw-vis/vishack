@@ -4,25 +4,21 @@
 
 |website| |release| |rtd| |license|
 
-VISHack
-=======
-
-VISHack is a python library for health checking of vibration isolation systems
-(VIS) in KAGRA. It can be used for both manual and automatic self-diagnosis
-(probably with Guardian).
+VISHack is a very light-weight python library for both manual and Guardian
+health checking of vibration
+isolation systems (VIS) in KAGRA.
 
 **features**
 
 * Health checks!
 * Many health checks!
 * command line tools health checking!
+* Handles diaggui files, extract transfer functions, power spectral densities
+with ease.
 
 **Documentation**: https://vishack.readthedocs.io
 
 **Repository**: https://github.com/gw-vis/vishack
-
-.. contents::
-   :depth: 2
 
 Getting Started
 ===============
@@ -33,6 +29,7 @@ Dependencies
 Required
 ^^^^^^^^
 * numpy
+* dtt2hdf
 
 Optional
 ^^^^^^^^
