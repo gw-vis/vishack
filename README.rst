@@ -14,7 +14,7 @@ isolation systems (VIS) in KAGRA.
 * Many health checks!
 * command line tools health checking!
 * Handles diaggui files, extract transfer functions, power spectral densities
-with ease.
+  with ease.
 
 **Documentation**: https://vishack.readthedocs.io
 
