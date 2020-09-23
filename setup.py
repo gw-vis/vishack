@@ -58,7 +58,9 @@ setup(
     # },
     entry_points={
         'console_scripts': [
-            'vishack-print=vishack.clitools.print_vishack:main'
+            'vishack-print=vishack.clitools.print_vishack:main',
+            'vishack-sample-config'\
+            '=vishack.clitools.generate_sample_config:main',
         ],
     }
     # List additional URLs that are relevant to your project as a dict.

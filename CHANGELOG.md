@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- [clitools][generate_sample_config] Added command line support. Now
+  sample config files can be generated with the command `vishack-sample-config`
+  . Options are `-n` name and `-o` overwrite.
+- [core][config] Added generate_sample_config() to automatically generate
+  a sample config file.
+- [core][healthcheck] Added HealthCheck class. Declare with a config file.
 - [data][diaggui] Added methods Diaggui.tf(), Diaggui.csd(), Diaggui.psd(), and
   Diaggui.coh(). Also added attributes Diaggui.items, Diaggui.path.
 - [data][diaggui] Added Diaggui class for handling diaggui XML files.

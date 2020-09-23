@@ -9,6 +9,13 @@ Compare
    :undoc-members:
    :show-inheritance:
 
+Configuration file
+------------------
+.. automodule:: vishack.core.config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Data Management
 ---------------
 
@@ -22,3 +29,14 @@ Diaggui
    :toctree: generated/
 
    Diaggui
+
+Health check
+------------
+
+.. _class-ref:
+.. currentmodule:: vishack.core.healthcheck
+
+.. autosummary::
+   :toctree: generated/
+
+   HealthCheck
