@@ -106,12 +106,12 @@ class Diaggui:
         csddata = self.items[datatype]['CSD'][channel_a]['CSD'][channel_b_index]
         return(f, csddata)
 
-    def psd(self, channel, datatype='results'):
+    def psd(self, channel_a, datatype='results'):
         """Read power spectral density from diaggui file
 
         Parameters
         ----------
-        channel: string
+        channel_a: string
             The channel name of the PSD to be read.
 
         Returns
@@ -127,10 +127,10 @@ class Diaggui:
         PSD.
         """
 
-        if not self._key_exists(datatype, 'PSD', channel):
-            raise ValueError('channel {} not exist'.format(channel))
-        f = self.items[datatype]['PSD'][channel]['FHz']
-        psddata = self.items[datatype]['PSD'][channel]['PSD'][0]
+        if not self._key_exists(datatype, 'PSD', channel_a):
+            raise ValueError('channel_a {} not exist'.format(channel_a))
+        f = self.items[datatype]['PSD'][channel_a]['FHz']
+        psddata = self.items[datatype]['PSD'][channel_a]['PSD'][0]
         return(f, psddata)
 
     def coh(self, channel_a, channel_b, datatype='results'):
@@ -161,7 +161,7 @@ class Diaggui:
         cohdata = self.items[datatype]['COH'][channel_a]['coherence'][channel_b_index]
         return(f, cohdata)
 
-    def reference_dict(self, index):
+    def get_reference(self, index):
         """Read a reference plot from the diaggui XML file
 
         Parameters
@@ -176,23 +176,26 @@ class Diaggui:
 
         Note
         ----
-        The reference_dict is taken from
+        The dict is taken from
         dtt2hdf.read_diaggui().references[index].
         Useful keys are 'type_name', 'channelA', 'channelB', 'channelB_inv',
-         'df', 'FHz', 'xfer', 'PSD', 'CSD', 'coherence'.
-        Example output:
+        'df', 'FHz', 'xfer', 'PSD', 'CSD', 'coherence'.
+
+        Example
+        -------
+        Here, reference #0 is the transfer function from BS_TM_L to BS_TM_L.
 
         .. code:: python
 
            In[0]:
-           import vishack.data.diaggui
-           dg = vishack.data.diaggui.Diaggui(path='data/BS_TML_exc_20200730a.xml')
-           dg.reference_dict(0)
+            import vishack.data.diaggui
+            dg = vishack.data.diaggui.Diaggui(path='data/BS_TML_exc_20200730a.xml')
+            dg.reference_dict(0)
 
         .. code:: python
 
            Out[0]:
-           {'gps_second': 1238215044.0078125,
+            {'gps_second': 1238215044.0078125,
              'subtype_raw': 0,
              'f0': 0.0,
              'df': 0.0078125,
@@ -215,12 +218,28 @@ class Diaggui:
 
         return(dict(self.items.references[index]))
 
-    def result_dict(self, type_name):
-        """Read a type of results from the diaggui XML file
+    def get_results(self, type_name):
+        """Return the results of a particular type from the diaggui XML file.
 
         Parameters
         ----------
         type_name: string
             The type of results. 'TF', 'COH', 'CSD', or 'PSD'.
+
+        Returns
+        -------
+        dict
+            A dictionary with all the results with key being the channelA
+            string.
         """
-        pass
+
+        # For some reason diaggui doesn't store transfer functions as 'TF' in
+        # results, but only in references. So we have to infer from 'CSD'.
+        if type_name == 'TF':
+            type_name = 'CSD'
+
+        if type_name in self.items.results:
+            return(self.items.results[type_name])
+        else:
+            raise ValueError('The file {} does not contain {} results.'\
+                ''.format(self.path, type_name))

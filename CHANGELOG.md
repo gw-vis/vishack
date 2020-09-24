@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- [core][evaluate] Added functions to evaluate RMS, WRMS, MSE, WMSE, MAE, WMAE.
+- [core][evaluate] Added this function library for evalutating statistical
+  quantities from frequency series.
+- [data][diaggui] In Diaggui class, added get_reference() and get_results
+  to get the reference and results data. These can be conveniently used in
+  iterations.
 - [clitools][generate_sample_config] Added command line support. Now
   sample config files can be generated with the command `vishack-sample-config`
   . Options are `-n` name and `-o` overwrite.
