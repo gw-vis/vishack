@@ -25,6 +25,7 @@ Diaggui
 .. _class-ref:
 .. currentmodule:: vishack.data.diaggui
 
+   :methods:
 .. autosummary::
    :toctree: generated/
 
