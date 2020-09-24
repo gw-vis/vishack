@@ -19,13 +19,19 @@ Configuration file
 Data Management
 ---------------
 
+Try
+^^^
+.. automodule:: vishack.data.diaggui
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Diaggui
 ^^^^^^^
 
 .. _class-ref:
 .. currentmodule:: vishack.data.diaggui
 
-   :methods:
 .. autosummary::
    :toctree: generated/
 
