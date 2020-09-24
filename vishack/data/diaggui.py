@@ -130,7 +130,7 @@ class Diaggui:
         psddata = self.items[datatype]['PSD'][channel]['PSD'][0]
         return(f, psddata)
 
-    def coh(self, ):
+    def coh(self, channel_a, channel_b, datatype='results'):
         """ Read coherence from diaggui file.
 
         Parameters
