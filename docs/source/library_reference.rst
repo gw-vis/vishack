@@ -1,17 +1,16 @@
 Library Reference
 =================
 
-Compare
--------
-
-.. automodule:: vishack.compare
+Configuration File
+------------------
+.. automodule:: vishack.core.config
    :members:
    :undoc-members:
    :show-inheritance:
 
-Configuration file
-------------------
-.. automodule:: vishack.core.config
+Evaluate Frequency Series
+-------------------------
+.. automodule:: vishack.core.evaluate
    :members:
    :undoc-members:
    :show-inheritance:
@@ -19,8 +18,8 @@ Configuration file
 Data Management
 ---------------
 
-Try
-^^^
+Diaggui class reference
+^^^^^^^^^^^^^^^^^^^^^^^
 .. automodule:: vishack.data.diaggui
    :members:
    :undoc-members:

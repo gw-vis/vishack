@@ -15,6 +15,8 @@ isolation systems (VIS) in KAGRA.
 * command line tools health checking!
 * Handles diaggui files, extract transfer functions, power spectral densities
   with ease.
+* Evaluate root-mean-square value, mean-square-error, maximum-absolute-error
+  from frequency series and their reference-whitened variants.
 
 **Documentation**: https://vishack.readthedocs.io
 
