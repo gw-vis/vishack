@@ -79,6 +79,8 @@ def wmse(data, reference):
         by the inverse of the reference.
     """
 
+    data = np.array(data)
+    reference = np.array(reference)
     werror = np.abs((data-reference)/reference)
     wmse_ = np.mean(werror**2)
     return(wmse_)
@@ -99,6 +101,8 @@ def mse(data, reference):
         The mean-square-error between the data and the reference.
     """
 
+    data = np.array(data)
+    reference = np.array(reference)
     error = np.abs((data-reference))
     mse_ = np.mean(error**2)
     return(mse_)
@@ -119,11 +123,14 @@ def wmae(data, reference):
         The maximum absolute error between the data and the reference whitened
         by the inverse of the reference.
     """
+
+    data = np.array(data)
+    reference = np.array(reference)
     werror = np.abs((data-reference)/reference)
     wmae_ = np.max(werror)
     return(wmae_)
 
-def wmae(data, reference):
+def mae(data, reference):
     """Maximum absolute error between the data and the reference
 
     Parameters
@@ -138,6 +145,9 @@ def wmae(data, reference):
     float
         The maximum absolute error between the data and the reference
     """
+
+    data = np.array(data)
+    reference = np.array(reference)
     error = np.abs((data-reference))
     mae_ = np.max(error)
     return(mae_)
