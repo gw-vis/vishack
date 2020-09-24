@@ -38,9 +38,11 @@ class Diaggui:
         else:
             self.items = dtt2hdf.read_diaggui(path)
             self.path = path
+
     def __str__(self):
         """ Return some useful info.
         """
+        pass
 
     def _key_exists(self, *keys):
         base = self.items
@@ -156,3 +158,29 @@ class Diaggui:
         f = self.items[datatype]['COH'][channel_a]['FHz']
         cohdata = self.items[datatype]['COH'][channel_a]['COH'][channel_b_index]
         return(f, cohdata)
+
+    def reference_info(self, index):
+        """Read a reference plot from the diaggui XML file
+
+        Parameters
+        ----------
+        index: int
+            The index of the reference plot in the diaggui XML
+
+        Returns
+        -------
+        reference_dict: dict
+            A dictionary with keys various useful info about the reference.
+
+        Note
+        ----
+        The reference_dict is structured as follows
+
+        .. code:: python
+
+           reference_dict = {
+
+           }
+
+        """
+        pass
