@@ -126,6 +126,7 @@ class Diaggui:
         The PSD in diaggui is actually amplitude spectral density (ASD), not
         PSD.
         """
+
         if not self._key_exists(datatype, 'PSD', channel):
             raise ValueError('channel {} not exist'.format(channel))
         f = self.items[datatype]['PSD'][channel]['FHz']
@@ -149,6 +150,7 @@ class Diaggui:
         cohdata: array
             The coherence between `channel_a` and `channel_b`.
         """
+
         if not self._key_exists(datatype, 'COH', channel_a):
             raise ValueError('channel_a {} not exist'.format(channel_a))
         elif not self._key_exists(
@@ -159,7 +161,7 @@ class Diaggui:
         cohdata = self.items[datatype]['COH'][channel_a]['coherence'][channel_b_index]
         return(f, cohdata)
 
-    def reference_info(self, index):
+    def reference_dict(self, index):
         """Read a reference plot from the diaggui XML file
 
         Parameters
@@ -169,18 +171,56 @@ class Diaggui:
 
         Returns
         -------
-        reference_dict: dict
-            A dictionary with keys various useful info about the reference.
+        dict
+            A dictionary with various useful info about the reference.
 
         Note
         ----
-        The reference_dict is structured as follows
+        The reference_dict is taken from
+        dtt2hdf.read_diaggui().references[index].
+        Useful keys are 'type_name', 'channelA', 'channelB', 'channelB_inv',
+         'df', 'FHz', 'xfer', 'PSD', 'CSD', 'coherence'.
+        Example output:
 
         .. code:: python
 
-           reference_dict = {
+           In[0]:
+           import vishack.data.diaggui
+           dg = vishack.data.diaggui.Diaggui(path='data/BS_TML_exc_20200730a.xml')
+           dg.reference_dict(0)
 
-           }
+        .. code:: python
 
+           Out[0]:
+           {'gps_second': 1238215044.0078125,
+             'subtype_raw': 0,
+             'f0': 0.0,
+             'df': 0.0078125,
+             'BW': 0.0117187,
+             'window_raw': 1,
+             'window': 'Hanning',
+             'avgtype_raw': 0,
+             'avgtype': 'Fixed',
+             'averages': 1,
+             'channelA': 'K1:VIS-BS_TM_LOCK_L_EXC',
+             'channelB': array(['K1:VIS-BS_TM_OPLEV_LEN_DIAG'], dtype='<U27'),
+             'channelB_inv': {'K1:VIS-BS_TM_OPLEV_LEN_DIAG': 0},
+             'subtype': 'transfer function B/A in format (Y)',
+             'type_name': 'TF',
+             'xfer': array([[ 2.0319992e-03+0.0000000e+00j,  1.5529208e-03+1.4785477e-03j,
+                      9.0984150e-04+1.8886093e-03j, ...,
+                      1.1092599e+27-2.3797619e+08j,  5.5111208e-08-2.0454582e-04j,
+                     -4.4841594e-35-4.2907759e-42j]], dtype=complex64)}
+        """
+
+        return(dict(self.items.references[index]))
+
+    def result_dict(self, type_name):
+        """Read a type of results from the diaggui XML file
+
+        Parameters
+        ----------
+        type_name: string
+            The type of results. 'TF', 'COH', 'CSD', or 'PSD'.
         """
         pass
