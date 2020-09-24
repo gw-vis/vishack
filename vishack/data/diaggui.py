@@ -156,7 +156,7 @@ class Diaggui:
             raise ValueError('channel_b {} not exist'.format(channel_b))
         channel_b_index = self.items[datatype]['COH'][channel_a]['channelB_inv'][channel_b]
         f = self.items[datatype]['COH'][channel_a]['FHz']
-        cohdata = self.items[datatype]['COH'][channel_a]['COH'][channel_b_index]
+        cohdata = self.items[datatype]['COH'][channel_a]['coherence'][channel_b_index]
         return(f, cohdata)
 
     def reference_info(self, index):
