@@ -8,8 +8,8 @@ Configuration File
    :undoc-members:
    :show-inheritance:
 
-Evaluate Frequency Series
--------------------------
+Frequency Series Statistics
+---------------------------
 .. automodule:: vishack.core.evaluate
    :members:
    :undoc-members:
