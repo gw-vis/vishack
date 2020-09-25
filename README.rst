@@ -39,7 +39,7 @@ Optional
 Note on installing dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 In principle, if you are using :code:`pip`, you don't have to install
-dependencies beforehand. When you install this package, :code`:pip` will
+dependencies beforehand. When you install this package, :code:`pip` will
 automatically install the required libraries. However if you are using Conda
 it is best to use its own package manager and not pip unless absolutely
 necessary.
