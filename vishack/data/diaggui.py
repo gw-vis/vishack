@@ -243,3 +243,10 @@ class Diaggui:
         else:
             raise ValueError('The file {} does not contain {} results.'\
                 ''.format(self.path, type_name))
+
+    def measure(self):
+        """Measure new results using the diaggui XML file.
+        """
+        logger.info("Measurement function not ready, skipping.")
+        pass
+        

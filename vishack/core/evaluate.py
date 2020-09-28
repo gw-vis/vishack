@@ -29,9 +29,13 @@ def wrms(data, df=1., whitening=None):
     will be the 2-norm.
     """
 
-    data = np.array(data)
+    data = np.array(data[1:])
+
     if whitening is None:
         whitening = np.ones(len(data))
+    else:
+        whitening = np.array(whitening[1:])
+
     wdata = np.abs(data*whitening)
     wrms_ = np.sqrt(np.sum(wdata**2*df))
 
@@ -60,7 +64,7 @@ def rms(data, df=1.):
     will be the 2-norm.
     """
 
-    return(wrms(data))
+    return(wrms(data=data, df=df))
 
 def wmse(data, reference):
     """Mean-square-error between the whitened data and reference data.
@@ -79,8 +83,8 @@ def wmse(data, reference):
         by the inverse of the reference.
     """
 
-    data = np.array(data)
-    reference = np.array(reference)
+    data = np.array(data[1:])
+    reference = np.array(reference[1:])
     werror = np.abs((data-reference)/reference)
     wmse_ = np.mean(werror**2)
     return(wmse_)
@@ -101,9 +105,10 @@ def mse(data, reference):
         The mean-square-error between the data and the reference.
     """
 
-    data = np.array(data)
-    reference = np.array(reference)
+    data = np.array(data[1:])
+    reference = np.array(reference[1:])
     error = np.abs((data-reference))
+    print(error)
     mse_ = np.mean(error**2)
     return(mse_)
 
@@ -124,8 +129,8 @@ def wmae(data, reference):
         by the inverse of the reference.
     """
 
-    data = np.array(data)
-    reference = np.array(reference)
+    data = np.array(data[1:])
+    reference = np.array(reference[1:])
     werror = np.abs((data-reference)/reference)
     wmae_ = np.max(werror)
     return(wmae_)
@@ -146,8 +151,8 @@ def mae(data, reference):
         The maximum absolute error between the data and the reference
     """
 
-    data = np.array(data)
-    reference = np.array(reference)
+    data = np.array(data[1:])
+    reference = np.array(reference[1:])
     error = np.abs((data-reference))
     mae_ = np.max(error)
     return(mae_)
