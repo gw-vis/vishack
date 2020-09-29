@@ -54,8 +54,6 @@ def get_name_and_ext(path):
         name = path
     return(name, ext)
 
-
-
 def append_to_name(name, ext, appendix=''):
     """Rename the name of the file if it exists
 
