@@ -3,6 +3,7 @@
 
 import configparser
 import os
+import vishack.data.output
 
 from vishack.logger import logger
 
@@ -55,24 +56,9 @@ def generate_sample_config(name='sample_config.ini', overwrite=False):
         'methods':'MSE, WMSE, MAE, WMAE, RMS, WRMS'
     }
 
-    i = 1
-    if len(name.split('.')) == 2:
-        ext = '.'+name.split('.')[1]
-        name = name.split('.')[0]
-    else:
-        ext = ''
-
-    path = name + ext
-    if os.path.exists(path):
-        logger.info('{} exists in the current directory'.format(path))
-        if not overwrite:
-            logger.info('overwrite is False. Renaming the sample config.')
-            while os.path.exists(path):
-                new_name = name + '({})'.format(i)
-                path = new_name+ext
-                i += 1
-        else:
-            logger.info('overwrite is True.')
+    path = name
+    if not overwrite:
+        path = vishack.data.output.rename(path=path, method='123')
 
     logger.info('Writing the sample config file to {}.'.format(path))
     with open(path, 'w') as configfile:
