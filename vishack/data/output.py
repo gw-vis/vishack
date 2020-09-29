@@ -4,7 +4,6 @@
 import os
 import time
 
-
 def rename(path, method='utc'):
     """Rename a file by appending something unique before extension.
 
