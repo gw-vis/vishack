@@ -24,5 +24,7 @@ def main(args=None):
             overwrite = True
         else:
             overwrite = False
+    else:
+        overwrite = opts.overwrite
     vishack.core.config.generate_sample_config(
         name=name, overwrite=overwrite)

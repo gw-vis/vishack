@@ -108,7 +108,6 @@ def mse(data, reference):
     data = np.array(data[1:])
     reference = np.array(reference[1:])
     error = np.abs((data-reference))
-    print(error)
     mse_ = np.mean(error**2)
     return(mse_)
 
