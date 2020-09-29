@@ -6,8 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- [core][healthcheck] Added HealthCheck.dict_to_string(),
+  HealthCheck.report_to_string, and HealthCheck.alert_to_string() to
+  format the report and alert to reStructuredText. And, added
+  HealthCheck.print_report() method to actually write the health check
+  report.
+- [core][healthcheck] Added HealthCheck.get_alerts() to store alarming
+  results from HealthCheck.report to HealthCheck.alert.
+- [core][healthcheck] Added HealthCheck.check() method to actually compare
+  measurements to references in diaggui XML files specified in the config file.
+  This method will write a report HealthCheck.report in the form of dictionary.
+- [data][output] Added methods for renaming in case of file confliction.
 - [core][evaluate] Added functions to evaluate RMS, WRMS, MSE, WMSE, MAE, WMAE.
-- [core][evaluate] Added this function library for evalutating statistical
+- [core][evaluate] Added this function library for evaluating statistical
   quantities from frequency series.
 - [data][diaggui] In Diaggui class, added get_reference() and get_results
   to get the reference and results data. These can be conveniently used in
