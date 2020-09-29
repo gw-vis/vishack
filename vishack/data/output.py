@@ -27,6 +27,8 @@ def rename(path, method='utc'):
         new_path = rename_method_utc(name, ext)
     elif method == '123':
         new_path = rename_method_123(name, ext)
+    else:
+        raise ValueError('Rename method {} not available.'.format(method))
     return(new_path)
 
 def get_name_and_ext(path):
