@@ -61,7 +61,7 @@ def run_measurement(path, saveas=None, remove_tmp=True):
         'quit',
     ]
 
-    script_path = vishach.data.output.rename('tmp', method='utc')
+    script_path = vishack.data.output.rename('tmp', method='utc')
     make_script(path=script_path, lines=lines, overwrite=False)
 
     os.system('diag -f {}'.format(script_path))
