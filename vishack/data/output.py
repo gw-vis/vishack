@@ -72,8 +72,11 @@ def append_to_name(name, ext, appendix=''):
     new_path: string
         The modified path name.
     """
-
-    new_path = name+appendix+'.'+ext
+    if ext == '':
+        dot = ''
+    else:
+        dot = '.'
+    new_path = name+appendix+dot+ext
     return(new_path)
 
 def rename_method_utc(name, ext):
@@ -92,7 +95,11 @@ def rename_method_utc(name, ext):
         The modified path name.
     """
 
-    new_path = name+'.'+ext
+    if ext == '':
+        dot = ''
+    else:
+        dot = '.'
+    new_path = name+dot+ext
     while os.path.exists(new_path):
         appendix = time.strftime("%Y%m%d%H%M%S", time.gmtime())
         new_path = append_to_name(name, ext, appendix)
@@ -114,7 +121,11 @@ def rename_method_123(name, ext):
         The modified path name.
     """
 
-    new_path = name+'.'+ext
+    if ext == '':
+        dot = ''
+    else:
+        dot = '.'
+    new_path = name+dot+ext
     i = 1
     while os.path.exists(new_path):
         appendix = '({})'.format(i)
