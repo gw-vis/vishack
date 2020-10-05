@@ -3,8 +3,10 @@
 
 import dtt2hdf
 import os
+import vishack.data.diag
 
 from vishack.logger import logger
+
 
 class Diaggui:
     """Diaggui class for handling and converting diaggui XML file.
@@ -247,6 +249,10 @@ class Diaggui:
     def measure(self):
         """Measure new results using the diaggui XML file.
         """
+        vishack.data.diag.run_measurement(
+            path=self.path,
+            saveas=None,
+            remove_tmp=True
+        )
         logger.info("Measurement function not ready, skipping.")
         pass
-        

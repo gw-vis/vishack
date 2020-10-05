@@ -20,11 +20,14 @@ def generate_sample_config(name='sample_config.ini', overwrite=False):
         be appended before the :code:`.ini` extension.
     """
 
-    config = configparser.ConfigParser()
+    config = configparser.ConfigParser(allow_no_value=True)
+    config.optionxform = str
 
     config['General'] = {
-        'Output log':'false',
-        'Log directory':'path/to/log/directory'
+        'Output report':'false',
+        'Report path':'path/to/report',
+        'Overwrite report':'false',
+        'Alert threshold':'3',
     }
 
     config['Directory settings'] = {
@@ -32,13 +35,13 @@ def generate_sample_config(name='sample_config.ini', overwrite=False):
     }
 
     config['Directories'] = {
-        'BS':'path/to/bs/xml/directory',
-        'ITMY':'path/to/itmy/xml/dirctory',
+        'path/to/bs/xml/directory':None,
+        'path/to/itmy/xml/dirctory':None,
     }
 
     config['Paths'] = {
-        'BS_TM_L':'path/to/BS/BS_TM_L.xml',
-        'this can be anything':'path/to/any/abc.xml',
+        'path/to/BS/BS_TM_L.xml':None,
+        'path/to/any/abc.xml':None,
     }
 
     config['Coherence'] = {

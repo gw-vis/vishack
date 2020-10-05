@@ -48,8 +48,8 @@ def get_name_and_ext(path):
     """
 
     if len(path.split('.')) >= 2:
-        ext = path.split('.')[-1]
-        name = path.rstrip('.'+ext)
+        ext = path.rsplit('.', 1)[1]
+        name = path.rsplit('.', 1)[0]
     else:
         ext = ''
         name = path
