@@ -1,2 +1,6 @@
 # from ..setup.py import VERSION
-__version__ = '0.0.0'
+MAJOR = 0
+MINOR = 0
+MICRO = 0
+VERSION = '%d.%d.%d'%(MAJOR,MINOR,MICRO)
+__version__ = VERSION

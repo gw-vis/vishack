@@ -22,7 +22,8 @@ copyright = '2020, Tsang Terrence Tak Lun'
 author = 'Tsang Terrence Tak Lun'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.0'
+import vishack
+release = vishack.__version__
 
 
 # -- General configuration ---------------------------------------------------

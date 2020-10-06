@@ -19,16 +19,14 @@ long_description = (here / 'README.rst').read_text(encoding='utf-8')
 
 # Arguments marked as "Required" below must be included for upload to PyPI.
 # Fields marked as "Optional" may be commented out.
-
-MAJOR = 0
-MINOR = 0
-MICRO = 0
-VERSION = '%d.%d.%d'%(MAJOR,MINOR,MICRO)
+import vishack
+VERSION = vishack.__version__
 
 setup(
     name='vishack',  # Required
     version=VERSION,  # Required
-    description='A health checking system for vibration isolation systems in KAGRA',  # Optional
+    description='A self-diagnostic system for vibration isolation systems in'\
+        'KAGRA',  # Optional
     long_description=long_description,  # Optional
     long_description_content_type='text/x-rst',  # Optional (see note above)
     url='https://github.com/gw-vis/vishack',  # Optional
@@ -61,6 +59,7 @@ setup(
             'vishack-print=vishack.clitools.print_vishack:main',
             'vishack-sample-config'\
             '=vishack.clitools.generate_sample_config:main',
+            'vishack=vishack.clitools.healthcheck:main',
         ],
     }
     # List additional URLs that are relevant to your project as a dict.
