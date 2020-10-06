@@ -23,10 +23,12 @@ srm_hc.print_report(path='reports/another_report.rst', overwrite=True)
 # To overwrite the alerts threshold in the config, we can manually generate
 # new alerts:
 srm_hc.get_alerts(threshold=1.9)
+# Exercise, try changing the threshold to 2.0 and see what happens to the
+# print function below.
 
 # If we want to check what which files are associated with the alerts,
 # We can simply print:
-print(srm_hc.alerts.keys())
+print(srm_hc.alert.keys())
 
 # After getting new alerts, we can print new reports.
 srm_hc.print_report(
