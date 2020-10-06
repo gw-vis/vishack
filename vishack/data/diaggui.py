@@ -254,4 +254,4 @@ class Diaggui:
             saveas=None,
             remove_tmp=True
         )
-        pass
+        self.items = dtt2hdf.read_diaggui(self.path)
