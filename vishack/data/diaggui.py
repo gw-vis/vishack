@@ -254,5 +254,4 @@ class Diaggui:
             saveas=None,
             remove_tmp=True
         )
-        logger.info("Measurement function not ready, skipping.")
         pass
