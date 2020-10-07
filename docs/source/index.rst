@@ -46,6 +46,9 @@ VISHack is a python library for health checking of vibration isolation systems
 
    self
    getting_started
+   config
+   tutorial
+   command_line_utilities
    library_reference
    how_to_contribute
    for_developers
