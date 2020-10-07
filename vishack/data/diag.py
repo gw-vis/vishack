@@ -29,8 +29,6 @@ def make_script(path, lines, overwrite=False):
             f.write(line)
             f.write('\n')
 
-    os.chmod(path, stat.S_IEXEC)
-
 def run_measurement(path, saveas=None, remove_tmp=True):
     """Run a measurement set up by a diaggui XML file.
 
