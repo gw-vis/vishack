@@ -1,12 +1,14 @@
-.. _Command Line Utilities::
-
 Command Line Utilities
 ======================
+VISHack can be used solely on a command line interface.
+
+If you would like to use VISHack on Python interfaces, see
+:ref:`VISHack Library Reference`.
 
 Generate sample configuration file
 ----------------------------------
 
-.. code:: bash
+.. code-block:: bash
 
    $ vishack-sample-config -h
    usage: vishack-sample-config [-h] [-n NAME] [-o]
@@ -18,11 +20,11 @@ Generate sample configuration file
      -n NAME, --name NAME  File name of the config
      -o, --overwrite       Overwrite existing file.
 
-Example
-^^^^^^^
+**Example**
+
 We can generate a sample configuration file named sample_config.ini using
 
-.. code :: bash
+.. code-block:: bash
 
    vishack-sample-config -n sample_config.ini
 
@@ -36,7 +38,7 @@ just pass in the :code:`-o` or :code:`--overwrite` argument:
 Perform "health check" using a configuration file
 -------------------------------------------------
 
-.. code:: bash
+.. code-block:: bash
 
    $ vishack -h
    usage: vishack [-h] -c CONFIG [-m]
@@ -51,19 +53,19 @@ Perform "health check" using a configuration file
                            sample-config
      -m, --measure         Trigger new measurements
 
-Example
-^^^^^^^
+**Example**
+
 To do "health checks" using a configuration file :code:`sample_config.ini`,
 type
 
-.. code:: bash
+.. code-block:: bash
 
    vishack -c sample_config.ini
 
 In k1ctr workstations, we can use the diaggui XML files to measure new results,
 in this case we can pass in the :code:`-m` or :code:`--measure` argument:
 
-.. code:: bash
+.. code-block:: bash
 
    vishack -c sample_config.ini -m
 

@@ -1,18 +1,19 @@
-.. _Tutorial::
-
 Tutorial
 ========
-Using VISHack to do suspension system diagnosis is a 3-step process and
-first 2 steps are really just preparations that needed to be done once.
-Step 3 is the line to trigger VISHack check and there are two ways, described
-in section 3 and section 4, to achieve it manually.
+Using VISHack to do suspension system diagnosis is a 3-step process.
 
-.. contents::
-   :depth: 2
+1. Prepare diaggui XML files with references.
+#. Prepare VISHack configuration file.
+#. Measure and checks (regular-checks) using VISHack.
+
+The first 2 steps are really just preparations that needed to be done once.
+Step 3 is the actual diagnosis/health check step. There are two ways that can
+achieve this, using command line or Python.
 
 Here, we present a step-by-step tutorial with an example on how to perform
 self-diagnosis, otherwise known as "health check", on KAGRA's vibration
-isolation systems (VIS).
+isolation systems (VIS). (In fact, VISHack would work on any systems that
+can be measured using diaggui.)
 
 All example files are avaliable at https://github.com/gw-vis/vishack/blob/master/examples
 
@@ -154,7 +155,7 @@ the configuration file.
 
 To run the tests using the config, simply type
 
-.. code:: bash
+.. code-block:: bash
 
    vishack -c config/example_config.ini
 
@@ -167,9 +168,9 @@ is set to false in the config, the UTC time will be appended to the file name
 before outputting the report.
 
 The above command will not trigger new measurements. If you would like to
-measure new results, add :code`-m` to the command:
+measure new results, add :code:`-m` to the command:
 
-.. code:: bash
+.. code-block:: bash
 
    vishack -c config/example_config.ini -m
 
@@ -178,13 +179,17 @@ because the :code:`diag` command is not installed on your local machine but
 only on k1ctr workstations. Nevertheless, this will still generate the
 report using the old reports.
 
+During the measurement, you should see meaningless outputs from the
+diagnostic command line tools :code:`diag`. In the future, we hope to replace
+this by a progress bar.
+
 4. Using VISHack in Python
 --------------------------
 An example Python script is available at `example_vishack_healthcheck.py`.
 
 This is the script.
 
-.. code:: python
+.. code-block:: python
 
   import vishack
 
@@ -224,3 +229,9 @@ This is the script.
       path='reports/another_report_with_new_threshold.rst',
       overwrite=True
   )
+
+5. Check out the references
+---------------------------
+
+Do check out :ref:`Command Line Utilities` and :ref:`VISHack Library Reference`
+for detailed descriptions on VISHack.

@@ -1,25 +1,55 @@
 |logo|
 
-**A health checking system for vibration isolation systems in KAGRA**
+**A self-diagnosis system for vibration isolation systems in KAGRA**
 
 |website| |release| |rtd| |license|
 
 VISHack
 =======
 
-VISHack is a python library for health checking of vibration isolation systems
-(VIS) in KAGRA. It can be used for both manual and automatic self-diagnosis
-(probably with Guardian).
+VISHack is a python library for system health checks of vibration isolation
+systems (VIS) in KAGRA.
 
-**features**
+**Main features**
 
-* Health checks!
-* Many health checks!
-* command line tools health checking!
+* Trigger diaggui measurements and perform system health checks with just one
+  line of command.
+* Powered by Python - easy integration with Guardian
+* Output system health reports with highlighted alerts.
+
+**Secondary features**
+
+* Wraps around :code:`dtt2hdf` - extract frequency series data from diaggui
+  XML files with ease.
+* Trigger new measurements using existing diaggui files.
 
 **Documentation**: https://vishack.readthedocs.io
 
 **Repository**: https://github.com/gw-vis/vishack
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   self
+   concept
+   getting_started
+   quick_example
+   config
+   command_line_utilities
+   vishack_library_reference
+   tutorial
+   how_to_contribute
+   for_developers
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
 
 .. |logo| image:: ../../logo.svg
     :alt: Logo
@@ -40,24 +70,3 @@ VISHack is a python library for health checking of vibration isolation systems
 .. |license| image:: https://img.shields.io/github/license/gw-vis/vishack
     :alt: License
     :target: https://github.com/gw-vis/vishack/blob/master/LICENSE
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   self
-   concept
-   getting_started
-   config
-   command_line_utilities
-   library_reference
-   tutorial
-   how_to_contribute
-   for_developers
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
