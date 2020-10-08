@@ -1,6 +1,21 @@
 Library Reference
 =================
 
+.. autosummary::
+   :toctree: generated/
+   :recursive:
+
+   vishack.HealthCheck
+   vishack.core.config
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   library/quick_reference
+
+
 Configuration File
 ------------------
 .. automodule:: vishack.core.config
@@ -14,35 +29,3 @@ Frequency Series Statistics
    :members:
    :undoc-members:
    :show-inheritance:
-
-Data Management
----------------
-
-Diaggui class reference
-^^^^^^^^^^^^^^^^^^^^^^^
-.. automodule:: vishack.data.diaggui
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Diaggui
-^^^^^^^
-
-.. _class-ref:
-.. currentmodule:: vishack.data.diaggui
-
-.. autosummary::
-   :toctree: generated/
-
-   Diaggui
-
-Health check
-------------
-
-.. _class-ref:
-.. currentmodule:: vishack.core.healthcheck
-
-.. autosummary::
-   :toctree: generated/
-
-   HealthCheck

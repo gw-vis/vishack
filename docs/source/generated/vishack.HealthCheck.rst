@@ -1,7 +1,7 @@
-﻿vishack.core.healthcheck.HealthCheck
-====================================
+﻿vishack.HealthCheck
+===================
 
-.. currentmodule:: vishack.core.healthcheck
+.. currentmodule:: vishack
 
 .. autoclass:: HealthCheck
 

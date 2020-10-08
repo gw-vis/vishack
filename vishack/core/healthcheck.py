@@ -1,4 +1,4 @@
-"""Health check for KAGRA vibration isolation system
+"""System checks (health checks) for KAGRA vibration isolation system
 """
 
 import configparser
@@ -125,9 +125,9 @@ class HealthCheck:
                 'Transfer function',
                 'Power spectral density',
                 'Coherence']):
-        """Perform health checks.
+        """Perform diagnosis checks (health checks).
 
-        Paramters
+        Parameters
         ---------
         new_measurement: boolean, optional.
             Trigger new measurement using the diaggui XML file.
@@ -406,7 +406,7 @@ class HealthCheck:
     def dict_to_string(self, dictionary):
         """Turns a report type dictionary to human readable string (rst)
 
-        Paramaters
+        Parameters
         ----------
         dictionary: dict
             The health check report or the alert

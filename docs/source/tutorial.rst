@@ -1,3 +1,5 @@
+.. _Tutorial::
+
 Tutorial
 ========
 Using VISHack to do suspension system diagnosis is a 3-step process and
@@ -6,7 +8,7 @@ Step 3 is the line to trigger VISHack check and there are two ways, described
 in section 3 and section 4, to achieve it manually.
 
 .. contents::
-   :depth: 1
+   :depth: 2
 
 Here, we present a step-by-step tutorial with an example on how to perform
 self-diagnosis, otherwise known as "health check", on KAGRA's vibration

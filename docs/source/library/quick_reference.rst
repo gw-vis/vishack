@@ -1,5 +1,9 @@
 Quick Reference
 ===============
+See here for a quick reference to the essential commands, functions and classes
+that are needed to use VISHack conveniently. Remember to check out
+:ref:`Tutorial` for step-by-step guide on how to configure and use VISHack
+in both command line and Python interface.
 
 Generate sample config
 ----------------------
