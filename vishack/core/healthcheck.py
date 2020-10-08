@@ -41,8 +41,9 @@ class HealthCheck:
         The report of the health check
     """
 
-    def __init__(self, config=None):
-        """
+    def __init__(self, config):
+        """Initiate HealthCheck class with a config file.
+
         Parameters
         ----------
         config: string

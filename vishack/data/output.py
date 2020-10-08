@@ -1,4 +1,4 @@
-"""Library for handling file outputting.
+"""Library for handling file outputs.
 """
 
 import os
@@ -101,7 +101,7 @@ def rename_method_utc(name, ext):
         dot = '.'
     new_path = name+dot+ext
     while os.path.exists(new_path):
-        appendix = time.strftime("%Y%m%d%H%M%S", time.gmtime())
+        appendix = time.strftime("%Y%m%d%H%M", time.gmtime())
         new_path = append_to_name(name, ext, appendix)
     return(new_path)
 
