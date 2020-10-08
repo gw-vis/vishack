@@ -1,5 +1,13 @@
 Tutorial
 ========
+Using VISHack to do suspension system diagnosis is a 3-step process and
+first 2 steps are really just preparations that needed to be done once.
+Step 3 is the line to trigger VISHack check and there are two ways, described
+in section 3 and section 4, to achieve it manually.
+
+.. contents::
+   :depth: 1
+
 Here, we present a step-by-step tutorial with an example on how to perform
 self-diagnosis, otherwise known as "health check", on KAGRA's vibration
 isolation systems (VIS).
@@ -50,7 +58,7 @@ The way VISHack works, is that
 it compares new measurement results to the references in the diaggui file.
 To prevent excessive false alarms,
 we recommend to have no less than 3 references of the same measurement,
-and, then more, the better.
+and, the more, the better.
 Of course, you can always add the measurements to the references when
 you decided that it was a false alarm.
 
@@ -72,15 +80,6 @@ there are 14 references in total. 7 PSD measurements of the channel
 The XML files are all populated inside the folder `diaggui/SRM`. There are
 two subfolders `diaggui/SRM/IP` and `diaggui/SRM/F0`, just for demonstration.
 
-VISHack evaluates mean-square-error (MSE), maximum-absolute-error (MAE)
-between frequency series, and evaluates 2-norm (RMS)
-(or integrated RMS if it's a spectral density) of
-frequency series. VISHack will first evaluate these values in-between
-references to get reference means and standard deviations of these values.
-Then, the measurements will be evaluated.
-The measurement values will then be compared with the reference means.
-If any measurement values is off by a certain threshold of standard deviation,
-then the particular measurement and diaggui XML file name will be reported.
 
 2. VISHack Configuration file
 -----------------------------
