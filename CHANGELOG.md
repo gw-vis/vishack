@@ -6,8 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- [clitools][healthcheck] Command `vishack -c path/to/config.ini -m`.
+- [data][diag] Added interface to the diagnostic tool command line interface
+  `diag` which is used for measuring in k1ctr workstations.
 - [core][healthcheck] Added HealthCheck.dict_to_string(),
-  HealthCheck.report_to_string, and HealthCheck.alert_to_string() to
+  HealthCheck.report_to_string(), and HealthCheck.alert_to_string() to
   format the report and alert to reStructuredText. And, added
   HealthCheck.print_report() method to actually write the health check
   report.
