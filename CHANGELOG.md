@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.0.0] - 2020-10-08
 ### Added
 - [clitools][healthcheck] Command `vishack -c path/to/config.ini -m`.
 - [data][diag] Added interface to the diagnostic tool command line interface
@@ -41,4 +43,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - This CHANGELOG file to hopefully serve as an evolving example of a
   standardized open source project CHANGELOG.
 
-[Unreleased]: https://github.com/gw-vis/vishack
+[Unreleased]: https://github.com/gw-vis/vishack/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/gw-vis/vishack/releases/tag/v1.0.0
