@@ -3,7 +3,6 @@ Library Reference
 
 .. autosummary::
    :toctree: generated/
-   :recursive:
 
    vishack.HealthCheck
    vishack.core.config
