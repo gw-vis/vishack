@@ -27,3 +27,23 @@ systems (VIS) in KAGRA.
 **Documentation**: https://vishack.readthedocs.io
 
 **Repository**: https://github.com/gw-vis/vishack
+
+.. |logo| image:: logo.svg
+    :alt: Logo
+    :target: https://github.com/gw-vis/vishack
+
+.. |website| image:: https://img.shields.io/badge/website-vishack-blue.svg
+    :alt: Website
+    :target: https://github.com/gw-vis/vishack
+
+.. |release| image:: https://img.shields.io/github/v/release/gw-vis/vishack?include_prereleases
+   :alt: Release
+   :target: https://github.com/gw-vis/vishack/releases
+
+.. |rtd| image:: https://readthedocs.org/projects/vishack/badge/?version=latest
+   :alt: Read the Docs
+   :target: https://vishack.readthedocs.io/
+
+.. |license| image:: https://img.shields.io/github/license/gw-vis/vishack
+    :alt: License
+    :target: https://github.com/gw-vis/vishack/blob/master/LICENSE
