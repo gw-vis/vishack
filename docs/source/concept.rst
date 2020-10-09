@@ -20,7 +20,7 @@ is healthy.
 
 Why VISHack?
 ------------
-While the traditional works fine, VISHack provides a more systematic
+While the traditional method works fine, VISHack provides a more systematic
 way to perform consistent system health checks conveniently. Since it is
 powered by Python, it would be possible to automate system health checks,
 for example, with Guardian, which is a state-machine software used in KAGRA
