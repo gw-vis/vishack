@@ -10,7 +10,7 @@ to suspend optics of the gravitational wave detector.
 
 What is "health check"?
 -----------------------
-Health checks tell if a suspension behave normally. Checks are usually
+Health checks tell if a suspension behaves normally. Checks are usually
 required after traumatic events such as earthquakes. In conventional system
 health checks, the expert typically uses diaggui measurement templates with
 reference plots of transfer functions to do the measurement.
