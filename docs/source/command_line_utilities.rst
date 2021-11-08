@@ -71,3 +71,21 @@ in this case we can pass in the :code:`-m` or :code:`--measure` argument:
 
 This will trigger and save new measurements using the diaggui XML files
 specified in the configuration file.
+
+Read time averaged values from EPICS record
+-------------------------------------------
+
+.. code-block:: bash
+
+   # vishack-read-time-average -h
+   usage: vishack-read-time-average [-h] [-c CONFIG] [-g] [-f]
+
+   Read time averaged values using EZCA and output to a file.
+
+   optional arguments:
+     -h, --help            show this help message and exit
+     -c CONFIG, --config CONFIG
+                           File name of the config
+     -g, --get-config      Get a sample configuration file
+     -f, --fake-ezca       Use fake ezca instead.
+

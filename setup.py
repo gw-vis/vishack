@@ -60,6 +60,8 @@ setup(
             'vishack-sample-config'\
             '=vishack.clitools.generate_sample_config:main',
             'vishack=vishack.clitools.healthcheck:main',
+            'vishack-read-time-average'\
+            '=vishack.clitools.read_time_average:main',
         ],
     }
     # List additional URLs that are relevant to your project as a dict.

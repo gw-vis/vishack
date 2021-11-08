@@ -13,6 +13,7 @@ For command line usage, see :ref:`Command Line Utilities`.
 
    vishack.generate_sample_config
    vishack.HealthCheck
+   vishack.data.ezca
 
 **Detailed reference (for power users only)**
 

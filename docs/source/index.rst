@@ -16,6 +16,8 @@ systems (VIS) in KAGRA.
   line of command.
 * Powered by Python - easy integration with Guardian
 * Output system health reports with highlighted alerts.
+* Read time average values from EPICS record using Ezca and output them
+  to a file.
 
 **Secondary features**
 

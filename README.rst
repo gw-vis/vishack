@@ -17,6 +17,8 @@ systems (VIS) in KAGRA.
 * Powered by Python - easy integration with Guardian, the state-transition
   software used in KAGRA inherited from LIGO.
 * Output system health reports with highlighted alerts.
+* Read time average values from EPICS record using Ezca and output them
+  to a file.
 
 **Secondary features**
 
